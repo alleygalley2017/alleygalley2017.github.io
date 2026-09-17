@@ -115,24 +115,16 @@
   }
   .hero-photos {
     position: relative;
-    min-height: 440px;
+    min-height: 560px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
-  .hero-photos .photo-a {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 58%;
+  .hero-photos img {
+    width: min(100%, 480px);
     aspect-ratio: 3/4;
     object-fit: cover;
-  }
-  .hero-photos .photo-b {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 52%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    box-shadow: 0 8px 32px rgba(90, 70, 54, 0.12);
+    object-position: center top;
   }
 
   .create {
@@ -416,7 +408,13 @@
 
   @media (max-width: 900px) {
     .hero, .create, .contact { grid-template-columns: 1fr; }
-    .hero-photos { min-height: 360px; max-width: 420px; margin: 0 auto; }
+    .hero-photos {
+      min-height: 0;
+      max-width: 360px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    .hero-photos img { width: 100%; }
     .video-grid { grid-template-columns: repeat(2, 1fr); }
     .contact-photo { max-width: 260px; }
     .site-nav-inner { grid-template-columns: 1fr auto; padding: 12px 16px; }
@@ -454,8 +452,7 @@
       <p class="role">UGC creator + micro influencer</p>
     </div>
     <div class="hero-photos">
-      <img class="photo-a" src="portfolio-photos/hero-avatar.jpg" alt="Allie Gallagher">
-      <img class="photo-b" src="portfolio-photos/still-4.jpg" alt="Allie — UGC sample">
+      <img src="portfolio-photos/hero-avatar.jpg" alt="Allie Gallagher">
     </div>
   </header>
 
