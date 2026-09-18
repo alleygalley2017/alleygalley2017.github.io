@@ -215,12 +215,9 @@
   .category h2 { text-align: center; }
   .video-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 18px 12px;
-  }
-  .video-grid.cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 560px;
+    max-width: 1100px;
     margin: 0 auto;
   }
   .clip-card { min-width: 0; }
@@ -230,14 +227,18 @@
     overflow: hidden;
     background: #2a2218;
     display: block;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
   }
+  .clip video,
   .clip img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.2s ease;
+    display: block;
   }
-  .clip:hover img { transform: scale(1.03); }
   .clip .play {
     position: absolute;
     inset: 0;
@@ -252,7 +253,9 @@
     font-size: 14px;
     color: var(--brown);
     pointer-events: none;
+    transition: opacity 0.15s ease;
   }
+  .clip.is-playing .play { opacity: 0; }
   .clip-title {
     margin: 10px 0 0;
     text-align: center;
@@ -414,7 +417,7 @@
     }
     .hero-photos img { width: 100%; }
     .create ul { grid-template-columns: 1fr; gap: 8px; }
-    .video-grid { grid-template-columns: repeat(2, 1fr); }
+    .video-grid { grid-template-columns: repeat(3, 1fr); }
     .contact-photo { max-width: 260px; }
     .site-nav-inner { grid-template-columns: 1fr auto; padding: 12px 16px; }
     .site-nav .links { display: none; }
@@ -422,7 +425,7 @@
   }
   @media (max-width: 480px) {
     .page { padding: 24px 16px 56px; }
-    .video-grid { gap: 16px 8px; }
+    .video-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 8px; }
     .form-row { grid-template-columns: 1fr; }
     .site-nav .brand { font-size: 18px; }
   }
@@ -494,109 +497,42 @@
   </div>
 
   <section class="category" id="work">
-    <h2>Hair &amp; beauty</h2>
+    <h2>Featured UGC</h2>
     <div class="video-grid">
       <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7662159267205582093" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-1.jpg" alt="Thayers toner">
+        <button class="clip" type="button" aria-label="Play Einstein Energy">
+          <video src="videos/52928.mp4" poster="portfolio-photos/thumbs/52928.jpg" playsinline preload="metadata" loop></video>
           <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Thayers toner</p>
+        </button>
+        <p class="clip-title">Einstein Energy</p>
       </article>
       <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7653689532394720526" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-2.jpg" alt="Tarte BB Cream">
+        <button class="clip" type="button" aria-label="Play Pirate's Booty">
+          <video src="videos/52564.mp4" poster="portfolio-photos/thumbs/52564.jpg" playsinline preload="metadata" loop></video>
           <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Tarte BB cream</p>
+        </button>
+        <p class="clip-title">Pirate’s Booty</p>
       </article>
       <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7660927229613853965" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-3.jpg" alt="Grande brows">
+        <button class="clip" type="button" aria-label="Play Lume wipes">
+          <video src="videos/52923.mp4" poster="portfolio-photos/thumbs/52923.jpg" playsinline preload="metadata" loop></video>
           <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Grande brows</p>
+        </button>
+        <p class="clip-title">Lume wipes</p>
       </article>
       <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7659601644794989837" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-8.jpg" alt="Crocs">
+        <button class="clip" type="button" aria-label="Play Olipop challenge">
+          <video src="videos/52924.mp4" poster="portfolio-photos/thumbs/52924.jpg" playsinline preload="metadata" loop></video>
           <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Crocs try-on</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="category">
-    <h2>Health &amp; wellness</h2>
-    <div class="video-grid">
-      <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7653654300400373005" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-4.jpg" alt="Javvy coffee">
-          <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Javvy coffee</p>
+        </button>
+        <p class="clip-title">Olipop challenge</p>
       </article>
       <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7662636092209876237" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-5.jpg" alt="Beam Biotic">
+        <button class="clip" type="button" aria-label="Play toddler snack haul">
+          <video src="videos/52925.mp4" poster="portfolio-photos/thumbs/52925.jpg" playsinline preload="metadata" loop></video>
           <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Beam Biotic</p>
-      </article>
-      <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7656598614625619214" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-6.jpg" alt="HydroJug">
-          <span class="play">▶</span>
-        </a>
-        <p class="clip-title">HydroJug</p>
-      </article>
-      <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7654311786920938766" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-7.jpg" alt="Stroller cup holder">
-          <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Stroller cup holder</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="category">
-    <h2>Mom + baby</h2>
-    <div class="video-grid cols-2">
-      <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/photo/7663210341584604429" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-0.jpg" alt="Pampers 360">
-          <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Pampers 360</p>
-      </article>
-      <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7654311786920938766" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-7.jpg" alt="Stroller hack">
-          <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Stroller hack</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="category">
-    <h2>Lifestyle</h2>
-    <div class="video-grid cols-2">
-      <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7659601644794989837" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-8.jpg" alt="Crocs try-on">
-          <span class="play">▶</span>
-        </a>
-        <p class="clip-title">Crocs try-on</p>
-      </article>
-      <article class="clip-card">
-        <a class="clip" href="https://www.tiktok.com/@alleygalley2017/video/7656598614625619214" target="_blank" rel="noopener">
-          <img src="portfolio-photos/still-6.jpg" alt="HydroJug">
-          <span class="play">▶</span>
-        </a>
-        <p class="clip-title">HydroJug</p>
+        </button>
+        <p class="clip-title">Toddler snack haul</p>
       </article>
     </div>
   </section>
@@ -680,6 +616,34 @@
   &copy; Allie Gallagher &middot; @alleygalley2017 &middot; UGC Portfolio
 </footer>
 <script>
+(function () {
+  var clips = document.querySelectorAll(".clip");
+  clips.forEach(function (clip) {
+    var video = clip.querySelector("video");
+    if (!video) return;
+    clip.addEventListener("click", function () {
+      clips.forEach(function (other) {
+        if (other === clip) return;
+        var otherVideo = other.querySelector("video");
+        if (!otherVideo) return;
+        otherVideo.pause();
+        other.classList.remove("is-playing");
+      });
+      if (video.paused) {
+        video.muted = false;
+        video.play();
+        clip.classList.add("is-playing");
+      } else {
+        video.pause();
+        clip.classList.remove("is-playing");
+      }
+    });
+    video.addEventListener("ended", function () {
+      clip.classList.remove("is-playing");
+    });
+  });
+})();
+
 (function () {
   var form = document.getElementById("contact-form");
   var statusEl = document.getElementById("form-status");
