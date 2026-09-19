@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Allie Gallagher · @alleygalley2017</title>
 <meta name="description" content="UGC creator and stay-at-home mom of four in SE Michigan. Portfolio, TikTok, Instagram, and shop links.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ07LK70VL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NJ07LK70VL');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
@@ -179,5 +187,19 @@
   <!-- Cloudflare Web Analytics -->
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dd0ad66c31764cb39b6dd13ed222e76e"}'></script>
   <!-- End Cloudflare Web Analytics -->
+  <script>
+  (function () {
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest("a");
+      if (!link || !window.gtag) return;
+      var label = (link.getAttribute("aria-label") || link.textContent || "").replace(/\s+/g, " ").trim();
+      gtag("event", "link_click", {
+        link_url: link.href || "",
+        link_text: label.slice(0, 100),
+        page_name: "bio"
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

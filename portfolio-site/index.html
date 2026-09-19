@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Allie Gallagher — UGC Creator + Micro Influencer</title>
 <meta name="description" content="Allie Gallagher is a UGC creator and stay-at-home mom of four in SE Michigan. Beauty, wellness, mom + baby, and lifestyle content for brands and TikTok Shop.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ07LK70VL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NJ07LK70VL');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
@@ -633,6 +641,14 @@
         video.muted = false;
         video.play();
         clip.classList.add("is-playing");
+        if (window.gtag) {
+          var card = clip.closest(".clip-card");
+          var titleEl = card ? card.querySelector(".clip-title") : null;
+          gtag("event", "video_play", {
+            video_title: titleEl ? titleEl.textContent.trim() : "unknown",
+            page_name: "portfolio"
+          });
+        }
       } else {
         video.pause();
         clip.classList.remove("is-playing");
@@ -695,6 +711,12 @@
         statusEl.textContent = "Sent — Allie will reply by email.";
         statusEl.className = "form-status success";
         form.reset();
+        if (window.gtag) {
+          gtag("event", "generate_lead", {
+            inquiry_type: inquiry,
+            page_name: "portfolio"
+          });
+        }
       })
       .catch(function () {
         var body =
@@ -719,5 +741,19 @@
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dd0ad66c31764cb39b6dd13ed222e76e"}'></script>
 <!-- End Cloudflare Web Analytics -->
+<script>
+(function () {
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest("a");
+    if (!link || !window.gtag) return;
+    var label = (link.getAttribute("aria-label") || link.textContent || "").replace(/\s+/g, " ").trim();
+    gtag("event", "link_click", {
+      link_url: link.href || "",
+      link_text: label.slice(0, 100),
+      page_name: "portfolio"
+    });
+  });
+})();
+</script>
 </body>
 </html>
