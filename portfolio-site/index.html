@@ -274,6 +274,26 @@
     text-transform: uppercase;
   }
 
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px 12px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .still-card { min-width: 0; }
+  .still {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background: #2a2218;
+  }
+  .still img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   .about {
     max-width: 760px;
     margin: 0 auto 72px;
@@ -426,6 +446,7 @@
     .hero-photos img { width: 100%; }
     .create ul { grid-template-columns: 1fr; gap: 8px; }
     .video-grid { grid-template-columns: repeat(3, 1fr); }
+    .photo-grid { grid-template-columns: repeat(2, 1fr); }
     .contact-photo { max-width: 260px; }
     .site-nav-inner { grid-template-columns: 1fr auto; padding: 12px 16px; }
     .site-nav .links { display: none; }
@@ -434,6 +455,7 @@
   @media (max-width: 480px) {
     .page { padding: 24px 16px 56px; }
     .video-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 8px; }
+    .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 8px; }
     .form-row { grid-template-columns: 1fr; }
     .site-nav .brand { font-size: 18px; }
   }
@@ -541,6 +563,36 @@
           <span class="play">▶</span>
         </button>
         <p class="clip-title">Once Upon a Farm</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="category" id="photos">
+    <h2>Photo UGC</h2>
+    <div class="photo-grid">
+      <article class="still-card">
+        <div class="still">
+          <img src="portfolio-photos/stills/pampers.jpg" alt="Pampers Swaddlers 360 UGC photo" loading="lazy">
+        </div>
+        <p class="clip-title">Pampers</p>
+      </article>
+      <article class="still-card">
+        <div class="still">
+          <img src="portfolio-photos/stills/dole.jpg" alt="Dole Mandarin Oranges UGC photo" loading="lazy">
+        </div>
+        <p class="clip-title">Dole</p>
+      </article>
+      <article class="still-card">
+        <div class="still">
+          <img src="portfolio-photos/stills/purely-elizabeth.jpg" alt="Purely Elizabeth granola UGC photo" loading="lazy">
+        </div>
+        <p class="clip-title">Purely Elizabeth</p>
+      </article>
+      <article class="still-card">
+        <div class="still">
+          <img src="portfolio-photos/stills/lesser-evil.jpg" alt="Lesser Evil Moonions UGC photo" loading="lazy">
+        </div>
+        <p class="clip-title">Lesser Evil</p>
       </article>
     </div>
   </section>
