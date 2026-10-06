@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capy-Era · Paid Social UGC — Allie Gallagher</title>
+<meta name="description" content="Capy-Era paid social UGC campaign by Allie Gallagher, UGC creator and mom of four in SE Michigan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alleygalley2017.github.io/portfolio-site/capy-era.html">
+<meta property="og:title" content="Capy-Era · Paid Social UGC — Allie Gallagher">
+<meta property="og:description" content="Three paid social UGC videos for Capy-Era by Allie Gallagher.">
+<meta property="og:image" content="https://alleygalley2017.github.io/portfolio-site/portfolio-photos/thumbs/capy-era/56232.jpg">
+<meta property="og:image:alt" content="Capy-Era campaign still">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://alleygalley2017.github.io/portfolio-site/portfolio-photos/thumbs/capy-era/56232.jpg">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ07LK70VL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NJ07LK70VL');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f7f0df;
+    --brown: #5a4636;
+    --brown-light: #7a6554;
+    --line: rgba(90, 70, 54, 0.14);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--brown);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .page { max-width: 1180px; margin: 0 auto; padding: 36px 28px 80px; }
+
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-nav-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+  .site-nav .brand {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+  .site-nav .brand em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--brown-light);
+    margin-left: 0.3em;
+  }
+  .site-nav .links {
+    display: flex;
+    gap: 28px;
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+  }
+  .site-nav .links a:hover { opacity: 0.65; }
+  .site-nav .actions {
+    justify-self: end;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .nav-btn {
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 9px 14px;
+    border: 1px solid var(--brown);
+    color: var(--brown);
+    background: transparent;
+  }
+  .nav-btn:hover { opacity: 0.78; }
+  .nav-btn.primary {
+    background: var(--brown);
+    color: var(--cream);
+  }
+
+  .back {
+    display: inline-block;
+    margin-bottom: 28px;
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .back:hover { opacity: 0.65; }
+  .campaign-head {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  .campaign-head h1 {
+    margin: 0;
+    font-size: clamp(44px, 8vw, 80px);
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+  .campaign-head .meta {
+    margin: 14px 0 0;
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brown-light);
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 16px;
+    max-width: 860px;
+    margin: 0 auto 64px;
+  }
+  .clip-card { min-width: 0; }
+  .clip {
+    position: relative;
+    aspect-ratio: 9/16;
+    overflow: hidden;
+    background: #2a2218;
+    display: block;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+  .clip video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .clip .play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: var(--brown);
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+  }
+  .clip.is-playing .play { opacity: 0; }
+  .clip-title {
+    margin: 10px 0 0;
+    text-align: center;
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .cta-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 22px 26px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.35);
+  }
+  .cta-banner p {
+    margin: 0;
+    font-size: clamp(20px, 3vw, 28px);
+    font-style: italic;
+    letter-spacing: 0.04em;
+  }
+  .cta-banner a {
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 12px 18px;
+    background: var(--brown);
+    color: var(--cream);
+  }
+  .cta-banner a:hover { opacity: 0.88; }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px 48px;
+    font-size: 14px;
+    color: var(--brown-light);
+    font-style: italic;
+  }
+
+  @media (max-width: 900px) {
+    .site-nav-inner { grid-template-columns: 1fr auto; padding: 12px 16px; }
+    .site-nav .links { display: none; }
+    .nav-btn.ghost { display: none; }
+  }
+  @media (max-width: 600px) {
+    .page { padding: 24px 16px 56px; }
+    .video-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 8px; }
+    .site-nav .brand { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary">
+  <div class="site-nav-inner">
+    <a class="brand" href="index.html">Allie Gallagher<em>UGC</em></a>
+    <div class="links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="actions">
+      <a class="nav-btn ghost" href="index.html#campaigns">All work</a>
+      <a class="nav-btn primary" href="index.html#contact">Work with me</a>
+    </div>
+  </div>
+</nav>
+<div class="page">
+
+  <a class="back" href="index.html#campaigns">← Back to portfolio</a>
+
+  <header class="campaign-head">
+    <h1>Capy-Era</h1>
+    <p class="meta">Paid Social UGC · 3 videos</p>
+  </header>
+
+  <div class="video-grid">
+    <article class="clip-card">
+      <button class="clip" type="button" aria-label="Play Obsessed with capybaras">
+        <video src="videos/capy-era/55589.mp4" poster="portfolio-photos/thumbs/capy-era/55589.jpg" playsinline preload="metadata" loop></video>
+        <span class="play">▶</span>
+      </button>
+      <p class="clip-title">Obsessed with capybaras</p>
+    </article>
+    <article class="clip-card">
+      <button class="clip" type="button" aria-label="Play Shouldn't have told her">
+        <video src="videos/capy-era/56235.mp4" poster="portfolio-photos/thumbs/capy-era/56235.jpg" playsinline preload="metadata" loop></video>
+        <span class="play">▶</span>
+      </button>
+      <p class="clip-title">Shouldn’t have told her</p>
+    </article>
+    <article class="clip-card">
+      <button class="clip" type="button" aria-label="Play Officially our Capy-Era">
+        <video src="videos/capy-era/56232.mp4" poster="portfolio-photos/thumbs/capy-era/56232.jpg" playsinline preload="metadata" loop></video>
+        <span class="play">▶</span>
+      </button>
+      <p class="clip-title">Officially our Capy-Era</p>
+    </article>
+  </div>
+
+  <div class="cta-banner">
+    <p>Want content like this for your brand?</p>
+    <a href="index.html#contact">Work with me</a>
+  </div>
+
+</div>
+
+<footer>
+  &copy; Allie Gallagher &middot; @alleygalley2017 &middot; UGC Portfolio
+</footer>
+<script>
+(function () {
+  var clips = document.querySelectorAll(".clip");
+  clips.forEach(function (clip) {
+    var video = clip.querySelector("video");
+    if (!video) return;
+    clip.addEventListener("click", function () {
+      clips.forEach(function (other) {
+        if (other === clip) return;
+        var otherVideo = other.querySelector("video");
+        if (!otherVideo) return;
+        otherVideo.pause();
+        other.classList.remove("is-playing");
+      });
+      if (video.paused) {
+        video.muted = false;
+        video.play();
+        clip.classList.add("is-playing");
+        if (window.gtag) {
+          var card = clip.closest(".clip-card");
+          var titleEl = card ? card.querySelector(".clip-title") : null;
+          gtag("event", "video_play", {
+            video_title: titleEl ? titleEl.textContent.trim() : "unknown",
+            campaign: "Capy-Era",
+            page_name: "capy-era"
+          });
+        }
+      } else {
+        video.pause();
+        clip.classList.remove("is-playing");
+      }
+    });
+    video.addEventListener("ended", function () {
+      clip.classList.remove("is-playing");
+    });
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dd0ad66c31764cb39b6dd13ed222e76e"}'></script>
+<!-- End Cloudflare Web Analytics -->
+<script>
+(function () {
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest("a");
+    if (!link || !window.gtag) return;
+    var label = (link.getAttribute("aria-label") || link.textContent || "").replace(/\s+/g, " ").trim();
+    gtag("event", "link_click", {
+      link_url: link.href || "",
+      link_text: label.slice(0, 100),
+      page_name: "capy-era"
+    });
+  });
+})();
+</script>
+</body>
+</html>

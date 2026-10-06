@@ -284,6 +284,71 @@
     text-transform: uppercase;
   }
 
+  .campaign-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .campaign-card {
+    display: block;
+    width: 320px;
+    text-align: center;
+  }
+  .fan {
+    position: relative;
+    height: 310px;
+    margin-bottom: 22px;
+  }
+  .fan img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 150px;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 24px rgba(63, 49, 38, 0.18);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease;
+  }
+  .fan img:nth-child(1) { transform: translateX(-50%) rotate(-12deg) translateX(-34px); }
+  .fan img:nth-child(2) { transform: translateX(-50%) rotate(12deg) translateX(34px); }
+  .fan img:nth-child(3) { transform: translateX(-50%); z-index: 2; }
+  .campaign-card:hover .fan img:nth-child(1) { transform: translateX(-50%) rotate(-18deg) translateX(-52px); }
+  .campaign-card:hover .fan img:nth-child(2) { transform: translateX(-50%) rotate(18deg) translateX(52px); }
+  .campaign-card:hover .fan img:nth-child(3) { transform: translateX(-50%) translateY(-6px); }
+  .campaign-name {
+    margin: 0;
+    font-size: clamp(24px, 3vw, 30px);
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .campaign-meta {
+    margin: 6px 0 14px;
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brown-light);
+  }
+  .campaign-link {
+    display: inline-block;
+    font-family: Outfit, system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border: 1px solid var(--brown);
+  }
+  .campaign-card:hover .campaign-link {
+    background: var(--brown);
+    color: var(--cream);
+  }
+
   .photo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -467,6 +532,9 @@
     .page { padding: 24px 16px 56px; }
     .video-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 8px; }
     .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 8px; }
+    .campaign-card { width: 100%; }
+    .fan { height: 250px; }
+    .fan img { width: 120px; }
     .form-row { grid-template-columns: 1fr; }
     .site-nav .brand { font-size: 18px; }
   }
@@ -575,6 +643,22 @@
         </button>
         <p class="clip-title">Once Upon a Farm</p>
       </article>
+    </div>
+  </section>
+
+  <section class="category" id="campaigns">
+    <h2>Campaigns</h2>
+    <div class="campaign-grid">
+      <a class="campaign-card" href="capy-era.html" aria-label="View the Capy-Era campaign">
+        <div class="fan">
+          <img src="portfolio-photos/thumbs/capy-era/55589.jpg" alt="" loading="lazy">
+          <img src="portfolio-photos/thumbs/capy-era/56235.jpg" alt="" loading="lazy">
+          <img src="portfolio-photos/thumbs/capy-era/56232.jpg" alt="Capy-Era campaign stills" loading="lazy">
+        </div>
+        <p class="campaign-name">Capy-Era</p>
+        <p class="campaign-meta">Paid Social UGC · 3 videos</p>
+        <span class="campaign-link">View campaign →</span>
+      </a>
     </div>
   </section>
 
